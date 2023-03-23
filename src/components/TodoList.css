@@ -5,6 +5,8 @@
     gap: 24px;
     align-items: start;
     padding: 25px;
+    height: 350px;
+    overflow-y: auto;
 }
 
 .list-item {
@@ -56,6 +58,15 @@
 }
 
 .delete-btn {
+    display: inline-block;
+    border: none;
+    outline: none;
+    background: inherit;
+    cursor: pointer;
+    
+}
+
+.edit-btn{
     display: inline-block;
     border: none;
     outline: none;

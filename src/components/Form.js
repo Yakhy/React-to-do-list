@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Form.css";
 
-function Form({setData}) {
+function Form({setData, setShow}) {
     const [todo, setTodo] = useState('')
 
 
@@ -18,9 +18,12 @@ function Form({setData}) {
             return [...prev, item]
         })
         setTodo("")
+       
     }
     
-    return <form className="form" onSubmit={handleSubmit}>
+    return (
+  
+    <form className="form" onSubmit={handleSubmit}>
     <input type="text" className="input" placeholder="Add new list item" required autoComplete="off" 
     autoFocus
     onChange={(e) => {
@@ -29,7 +32,10 @@ function Form({setData}) {
     value={todo}
     />
     <button className="btn" type="submit">Add</button>
-    </form>;
+    </form>
+   
+  
+    )
 }
 
 export default Form;
